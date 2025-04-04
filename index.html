@@ -14,30 +14,37 @@
     <section id="data-table">
 
         <h1>My Simple Inventory App</h1>
-        <table id="lambda-info" hidden>
+        <button id="load-data">Load All Items</button>
+        <table id="lambda-info">
         <!-- loaded with AJAX -->
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Action</th>
-            </tr>
-         </thead>
-         <tbody>
-            
-         </tbody>
         </table>
 
-        <button id="load-data">Load Data</button>
         <p>Loads data from the server</p>
         <script>
             document.getElementById("load-data").onclick = function () {
                 let lambda = document.getElementById("lambda-info");
                 let xhr = new XMLHttpRequest();
+                xhr.responseType ='json';
                 xhr.addEventListener("load", function () {
-                    lambda.hidden = false;
-                    lambda.innerHTML = xhr.response;
+                    const data = xhr.response;
+                    lambda.innerHTML = 
+                        `<thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        ${data.map((item, index) => 
+                            `<tr>
+                                <th scope="row">${index+1}</th>
+                                <td>${item.id}</td>
+                                <td>${item.price}</td>
+                                <td><button>Delete</button></td>
+                            </tr>`).join('')}
+                        </tbody>`;
                 });
                 xhr.open("GET", "https://ii03ewr3r6.execute-api.us-east-2.amazonaws.com/items");
                 xhr.send();
@@ -55,7 +62,7 @@
             xhr.open("PUT", "https://ii03ewr3r6.execute-api.us-east-2.amazonaws.com/items");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(JSON.stringify({
-                "id": "kevin",
+                "id": "billy",
                 "price": 19,
                 "name": "test put value"
             }));
