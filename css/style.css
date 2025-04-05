@@ -1,10 +1,153 @@
-h1{
-  border-color: #d3e644;
+h1 {
+  border-color: rgb(0, 143, 124);
+  padding: 10px;
   border-style: dashed;
 }
 
-#data-table{
+body {
+  background-color: plum;
+}
+
+#data-table {
+  background-color: aquamarine;
+}
+#heading {
+  margin-left: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
+button {
+  border:0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+  inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+  inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+button:active {
+  box-shadow:
+  inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+  inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+table { 
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family:sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  width: 425px;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+
+#item-input {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom : 20px;
+}
+
+label {
+  padding-right: 25px;
+}
+
+#add-item {
+  background-color: aquamarine;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: solid;
+  border-color: rgb(0, 143, 124);
+  padding: 1px;
+  width: 350px;
+}
+
+#add-item > h1 {
+  border: none;
+  width: 280;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#add-form {
+  padding: 50px 10px 50px 10px;
+  float: right;
+  display: table;
+}
+
+#send-data {
+  margin: 10px 10px 10px 235px;
+}
+
+.delete-data {
+  border:0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 1);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+  inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+  inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.delete-data:hover {
+  background-color: rgba(100, 100, 100, 1);
+}
+
+.delete-data:active {
+  box-shadow:
+  inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+  inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
