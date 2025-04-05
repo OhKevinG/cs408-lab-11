@@ -8,7 +8,11 @@ CS408 001
 
 ## Overview
 
-This project shows an example of how to work with and AWS Database and the basic CRUD operations "GET", "PUT" and "DELETE". 
+This project shows an example of how to work with and AWS Database and the basic CRUD operations "GET", "PUT" and "DELETE".
+
+## Running
+
+Run the website through VSCode's Live Preview extension.
 
 ## Sources and Credits
 
