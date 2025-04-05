@@ -12,7 +12,9 @@ This project shows an example of how to work with and AWS Database and the basic
 
 ## Running
 
-Run the website through VSCode's Live Preview extension.
+1.) Clone this repository onto a local machine with VSCode.
+
+2.) Run the website through VSCode's Live Preview extension.
 
 ## Sources and Credits
 
